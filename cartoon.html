@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Cartoon Website</title>
+  
+  <style>
+    body {
+      background-color: #f8e8b6;
+      font-family: 'Comic Sans MS', sans-serif;
+      color: #474747;
+    }
+    
+    h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px #dbd2a9; 
+    }
+    
+    #main {
+      width: 800px;  
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 10px solid #e2dccb;
+      border-radius: 20px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #a7dba8;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;  
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <div id="main">
+    
+    <h1>Welcome To My Site!</h1>
+    
+    <p>Here is some cartoon text with a fun font.</p>
+    
+    <button onclick="changeTextColor()">Click Me!</button>
+    
+  </div>
+
+  <script>
+    function changeTextColor() {
+      document.body.style.color = "#ff9800"; 
+    }
+  </script>
+
+</body>
+</html>

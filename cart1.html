@@ -1,0 +1,169 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Batman Cartoon Website</title>
+
+<style>
+  body {
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: #121212; 
+    color: #fdfdfd;
+    margin: 0; /* Added margin reset */
+  }
+ 
+
+  header {
+    background-image: url('batt.jpg');
+    background-attachment: fixed;
+    background-size: cover; 
+    text-align: center;
+    padding: 60px;
+    font-size: 60px;  
+  }
+
+  section {
+    padding: 40px;
+    background-color: #2c2c2c; 
+    box-shadow: 5px 5px 5px #000000;
+    position: relative; /* Added relative positioning */
+  } 
+
+  section img {
+    float: left;
+    margin-right: 20px; 
+  }
+
+  footer {
+    background-color: #fdfdfd;
+    color: #121212; 
+    padding: 20px;
+    text-align: center; 
+  }
+
+  /* Parallax related styles */
+  .parallax-section {
+    position: relative;
+    overflow: hidden;
+    perspective: 1px;
+    height: 100vh;
+    width: 100vw; /* Full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Double the width for parallax effect */
+    height: 100%;
+    transform: translateZ(-1px) scale(1.5);
+    z-index: -1;
+  }
+
+  .story-box {
+    background-color: #f4f4f4; 
+    color: #000000;
+    box-shadow: 5px 5px 5px #333;  
+    padding: 20px;
+    margin: 20px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  .batman {
+    margin-bottom: 40px;
+  }
+   /* Navbar styles */
+   .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+</style>
+
+</head>
+<div class="cont">
+<body>
+   
+        <div class="cont">
+          <!-- Navbar -->
+          <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#story1">Story 1</a>
+            <a href="#story2">Story 2</a>
+            <a href="#story3">Story 3</a>
+          </div>
+
+<header>
+  Gotham City 
+</header>  
+
+<section class="batman">
+  <img src="batman-heroo.jpg">
+  <h1>About Batman</h1>
+  <p>Batman fights crime in Gotham City. He brings dark justice using high tech gadgets!</p>   
+</section>
+</div>
+
+
+<!-- Parallax sections -->
+<section class="parallax-section" id="story1">
+  <div class="parallax-background" style="background-image: url('bat.jpg')"></div>
+  <div class="story-box">
+    <p>Batman received an alert that the Joker escaped from Arkham Asylum.</p>
+  </div>
+</section>
+
+<section class="parallax-section" id="story2">
+  <div class="parallax-background" style="background-image: url('batt.jpg')"></div>
+  <div class="story-box">
+    <p>He raced to the Gotham Museum where the Joker was spotted.</p>
+  </div>
+</section>
+
+<section class="parallax-section" id="story3">
+  <div class="parallax-background" style="background-image: url('bat2.jpg')"></div>
+  <div class="story-box">
+    <p>The Joker was about to steal priceless jewels. "I'll be taking these Batman!" he cackled.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; Batman Fan Club
+</footer>
+
+<script>
+  // JavaScript code for parallax effect
+  window.addEventListener('scroll', function() {
+    let scrollPosition = window.pageYOffset;
+
+    document.querySelectorAll('.parallax-section').forEach(function(section) {
+      let offset = section.offsetTop;
+      let distance = offset - scrollPosition;
+
+      let parallaxSpeed = 0.5; // Adjust this speed as needed
+
+      let parallaxBg = section.querySelector('.parallax-background');
+      parallaxBg.style.transform = 'translateY(' + (distance * parallaxSpeed) + 'px)';
+    });
+  });
+</script>
+
+</body>
+</html>
